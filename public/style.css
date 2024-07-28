@@ -154,12 +154,11 @@ footer .copyright {
     flex-direction: row;
     padding: 20px;
     padding-top: 5px;
-    min-height: 60vh;
+    height: 60vh;
 }
 
 #table-login .left{
     width: 70%;
-    /* height: 100vh; */
     padding-right: 20px;
 }
 
@@ -172,11 +171,23 @@ footer .copyright {
 }
 
 #table-login .left .search .search-from{
-    padding-right: 30px;
+    /* padding-right: 30px; */
+    margin-right: 30px;
 }
 
 #table-login .left .search .search-to{
     padding-right: 30px;
+}
+
+#table-login .left .search .box input{
+    outline: none;
+    padding: 2px 4px;
+    margin-left: 0;
+}
+
+#table-login .left .search .box label{
+    background-color: #a3a8a6;
+    padding: 1px 4px;
 }
 
 #table-login .left .search .search-btn button{
@@ -184,10 +195,12 @@ footer .copyright {
 }
 
 .table{
-    padding: 20px;
+    margin: 20px;
     display: block;
     overflow-x: scroll;
+    overflow-y: scroll;
     white-space: nowrap;
+    height: 50vh;
 }
 
 .table table{
@@ -196,6 +209,10 @@ footer .copyright {
 
 .table thead th{
     background-color: #99bdaf;
+}
+
+.table .stick-top tr {
+    position: sticky;
 }
 
 .table table, tr, th, td{
@@ -215,6 +232,10 @@ footer .copyright {
 
 .table tr:hover{
     background-color: #cfc4c4;
+}
+
+.table tbody tr a{
+    text-decoration: none;
 }
 
 #table-login .right{
