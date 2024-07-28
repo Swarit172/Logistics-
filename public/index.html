@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Logistic</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
     <section id="header">
@@ -14,7 +15,7 @@
                 <li ><a class="active" href="index.html">Home</a></li>
                 <li><a href="book.html">Booking</a></li>
                 <li><a href="about.html">About</a></li>
-                <li><a href="login.html">Login/SignUp</a></li>
+                <li><a href="signup.html">SignUp</a></li>
             </ul>
         </div>
     </section>
@@ -98,10 +99,25 @@
 
         <div class="form split right">
             <form action="">
-                <label for="pno">phone no.</label>
-                <input type="number" name="phone-number" id="num">
-                <label for="password">password</label>
-                <input type="password" name="" id="password">
+                <div class="login-text">Login To Your Account</div> <hr>
+                <div class="phno mid">
+                    <i class="fa-solid fa-user"></i>
+                    <input type="number" name="" id="num" placeholder="Enter Phone no.">
+                </div>
+                <div class="pw mid">
+                    <i class="fa-solid fa-lock"></i>
+                    <input type="password" name="" id="password" placeholder="Password">
+                </div>
+                <div class="remember-me">
+                    <input type="checkbox" name="remember" id="">
+                    <label for="remember">Remember me</label>
+                </div>
+                <button type="submit">Submit</button>
+                <hr>
+                <div class="below-login">
+                    <div class="account">Not registered? <a href="signup.html">Create a Account</a></div>
+                    <div class="lost-pw">Lost your password? <a href="#">Click here to recover</a></div>
+                </div>
             </form>
         </div>
         

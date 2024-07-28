@@ -1,9 +1,11 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,100..900;1,100..900&display=swap');
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
+    /* font-family: Arial, Helvetica, sans-serif; */
+    font-family: 'Libre Franklin', sans-serif;
+
 }
 
 .section-p1{
@@ -161,12 +163,6 @@ footer .copyright {
     padding-right: 20px;
 }
 
-#table-login .right{
-    width: 30%;
-    /* height: 100vh; */
-    border-style: solid;
-    border-width: 1px;
-}
 
 #table-login .left .search {
     display: flex;
@@ -181,6 +177,10 @@ footer .copyright {
 
 #table-login .left .search .search-to{
     padding-right: 30px;
+}
+
+#table-login .left .search .search-btn button{
+    padding: 3px 4px ;
 }
 
 .table{
@@ -216,6 +216,84 @@ footer .copyright {
 .table tr:hover{
     background-color: #cfc4c4;
 }
+
+#table-login .right{
+    width: 30%;
+    margin: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px 4px rgba(0,0,0,0.4);
+}
+
+#table-login .right form{
+    margin: 20px;
+}
+
+#table-login .right form .login-text{
+    font-size: 25px;
+    padding-bottom: 10px;
+}
+
+#table-login .right form .phno{
+    padding: 15px 0;
+    display: flex;
+}
+
+#table-login .right form .phno input{
+    width: 100%;
+    height: 30px;
+    outline: none;
+    padding-left: 4px;
+}
+
+#table-login .right form .pw{
+    padding-bottom: 15px;
+    display: flex;
+}
+
+#table-login .right form .pw input{
+    width: 100%;
+    height: 30px;
+    outline: none;
+    padding-left: 4px;
+}
+
+#table-login .right form .mid i {
+    align-content: center;
+    padding: 0 4px;
+    background-color: #a3a8a6;
+}
+
+#table-login .right form .remember-me{
+    font-size: 13px;
+}
+
+#table-login .right form .remember-me input{ 
+    zoom: .85;
+    align-content: center;
+}
+
+#table-login .right form button{
+    margin: 15px 0;
+    padding: 3px 5px;
+}
+
+#table-login .right form .below-login {
+    margin: 15px 0;
+}
+
+#table-login .right form .below-login .lost-pw{
+    margin: 15px 0;
+}
+
+#table-login .right form .below-login a{
+    text-decoration: none;
+    color: #122fc4;
+}
+
+#table-login .right form .below-login a:hover{
+    color: #088178;
+}
+
 
 
 
