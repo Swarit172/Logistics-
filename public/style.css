@@ -80,6 +80,9 @@
     left: 20px;
 }
 
+marquee{
+    padding: 3px 0 3px 0;
+}
 
 footer {
     display: flex;
@@ -163,23 +166,23 @@ footer .copyright {
 }
 
 
-#table-login .left .search {
+/* #table-login .left .search {
     display: flex;
     align-items: center;
     margin-left: 30%;
     margin-top: 20px;
-}
+} */
 
-#table-login .left .search .search-from{
-    /* padding-right: 30px; */
+/* #table-login .left .search .search-from{
+   
     margin-right: 30px;
 }
 
 #table-login .left .search .search-to{
     padding-right: 30px;
-}
+} */
 
-#table-login .left .search .box input{
+/* #table-login .left .search .box input{
     outline: none;
     padding: 2px 4px;
     margin-left: 0;
@@ -192,7 +195,7 @@ footer .copyright {
 
 #table-login .left .search .search-btn button{
     padding: 3px 4px ;
-}
+} */
 
 .table{
     margin: 20px;
@@ -201,6 +204,7 @@ footer .copyright {
     overflow-y: scroll;
     white-space: nowrap;
     height: 50vh;
+    padding: 5px 0 0 5px;
 }
 
 .table table{
@@ -315,7 +319,38 @@ footer .copyright {
     color: #088178;
 }
 
+/* ---------------------------------------------------------------- */
+/* Details page */
 
+.section{
+    margin: 10% 20%;
+    background-color: #e6f3ede5;
+}
+#detail-div{
+    padding: 60px 0  60px 130px;
+}
+
+tr td{
+    column-width: 300px;
+    padding: 10px 10px 10px 15px;
+    border: none;
+    text-align: left;
+}
+
+table tr:nth-child(even){
+    background-color: #9891915d; 
+}
+/* ---------------------------------------------------------------------- */
+/* Vehicle Register */
+
+.vehicle-form{
+    display: flex;
+    flex-direction: row;    
+}
+
+#veh-fr{
+    margin: 101px 200px;
+}
 
 
 
