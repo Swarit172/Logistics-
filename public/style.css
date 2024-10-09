@@ -202,22 +202,23 @@ footer .copyright {
     display: block;
     overflow-x: scroll;
     overflow-y: scroll;
-    white-space: nowrap;
+    /* white-space: nowrap; */
     height: 50vh;
     padding: 5px 0 0 5px;
+    width: 100%;
 }
 
 .table table{
-    border-collapse: collapse;
+    border-collapse: collapse;  
 }
 
 .table thead th{
     background-color: #99bdaf;
 }
 
-.table .stick-top tr {
+/* .table .stick-top tr {
     position: sticky;
-}
+} */
 
 .table table, tr, th, td{
     border: 1px solid #101010;
@@ -242,7 +243,7 @@ footer .copyright {
     text-decoration: none;
 }
 
-#table-login .right{
+/* #table-login .right{
     width: 30%;
     margin: 20px;
     border-radius: 5px;
@@ -317,7 +318,7 @@ footer .copyright {
 
 #table-login .right form .below-login a:hover{
     color: #088178;
-}
+} */
 
 /* ---------------------------------------------------------------- */
 /* Details page */
@@ -340,20 +341,136 @@ tr td{
 table tr:nth-child(even){
     background-color: #9891915d; 
 }
-/* ---------------------------------------------------------------------- */
-/* Vehicle Register */
+/*----------------------------------------------------------------------*/
+/* Vehicle Register */ 
 
-.vehicle-form{
+#veh-body{
+    background-color: #d9ece6;
+}
+
+.vehicle-data {
+    margin: 3% 20%;
+    padding: 20px;
+    border: 2px solid #fffbfb;
+    /* border-radius: 8px; */
+    box-shadow: 0px 4px 8px rgba(0,0,0,0.1);
+    /* z-index: 1; */
+    background-color: #ffffff;
+}
+
+.vehicle-data legend{
+    opacity: 5;
+}
+
+.vehicle-form {
     display: flex;
-    flex-direction: row;    
+    flex-direction: column;
+    margin: 30px 0 30px 130px;
 }
 
-#veh-fr{
-    margin: 101px 200px;
+.form-item {
+    display: flex;
+    align-items: center;
+    padding-bottom: 30px;
 }
 
+.form-item label {
+    width: 150px; /* Fixed width to align labels */
+    text-align: right; /* Align text to the right to keep it close to the input */ 
+    margin-right: 50px; /* Space between label and input */
+}
 
+.form-item input {
+    outline: none;
+    height: 30px;
+    width: 100%; /* Make input take up remaining space */
+    max-width: 450px; /* Limit the input width */
+    font-size: 15px;
+    padding-left: 5px;
+    border: 1px solid #f0f1f1;
+    /* border-radius: 4px; */
+    transition: border-color 0.3s ease-in-out;
+    background-color: #f0f1f1;
+}
 
+.form-item input:focus {
+    border-color: #b2bfcc;
+}
+
+.veh-register-btn{
+    margin-left: 30%;
+    padding: 3px;
+    font-size: 15px;
+    height: 30px;
+    width: 300px;
+    border: 0;
+    background-color: #3b3939;
+    color: white;
+    cursor: pointer;
+}
+
+.veh-register-btn:hover{
+    background-color: #a3a8a6;
+    color: #101010;
+    font-weight: 500;
+}
+
+/* -------------------------------------------------------------- */
+/* Login page */
+
+.login-form {
+    margin: 10% 30% 0 30%;
+}
+
+.login-text{
+    font-weight: 500;
+    font-size: 25px;
+    /* padding-bottom: 6px; */
+}
+
+hr{
+    width: 600px;
+    margin: 16px 16px 16px 30px;
+}
+
+.mid{
+    margin-left: 30px;
+    margin-bottom: 16px;
+}
+
+.mid label{
+    margin-right: 30px;
+}
+
+.mid input{
+    outline: none;
+    width: 350px;
+    height: 30px;
+    padding-left: 4px;
+}
+
+.remember-me{
+    margin: 0 0 16px 35px;
+    font-size: 12px;
+}
+
+.remember-me input{
+    height: 11px;
+    width: 11px;
+}
+
+.btn-login{
+    margin-left: 30px;
+    padding: 4px 15px;
+}
+
+.below-login a{
+    text-decoration: none;
+}
+
+.account{
+    margin-bottom: 16px;
+}
 
 
 
