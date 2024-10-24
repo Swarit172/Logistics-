@@ -4,12 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
 
+    {{>header}} 
+
     <div class="login-form">
-        <form action="">
+        <form action="/login" method="POST">
             <div class="login-text">Login To Your Account</div> <hr>
             <div class="phno mid">
                 <!-- <i class="fa-solid fa-user"></i> -->
@@ -28,11 +30,13 @@
             <button type="submit" class="btn-login">Submit</button>
             <hr>
             <div class="below-login">
-                <div class="account">Not registered? <a href="signup.html">Create a Account</a></div>
+                <div class="account">Not registered? <a href="/signup">Create a Account</a></div>
                 <div class="lost-pw">Lost your password? <a href="#">Click here to recover</a></div>
             </div>
         </form>
     </div>
+
+    {{>footer}}
     
 </body>
 </html>

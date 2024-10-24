@@ -22,7 +22,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 20px 80px;
+    padding: 40px 80px;
     background: #E3E6F3;
     box-shadow: 0 5px 15px rgb(0,0,0,0.06);
     /* z-index: 999; */
@@ -325,11 +325,11 @@ footer .copyright {
 /* Details page */
 
 .section{
-    margin: 10% 20%;
+    margin: 7% 20% 7% 20%;
     background-color: #e6f3ede5;
 }
 #detail-div{
-    padding: 60px 0  60px 130px;
+    padding: 60px 130px  60px 130px;
 }
 
 tr td{
@@ -420,7 +420,7 @@ table tr:nth-child(even){
 /* Login page */
 
 .login-form {
-    margin: 10% 30% 0 30%;
+    margin: 7% 30% 7% 30%;
 }
 
 .login-text{
@@ -477,7 +477,7 @@ hr{
 /* Signup Page */
 
 .signup-form{
-    margin: 10% 30% 0 30%;
+    margin: 7% 30% 7% 30%;
 }
 
 .signup-text{

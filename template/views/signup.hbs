@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SignIn</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+    {{>header}}
+
+    <div class="signup-form">
+        <form action="/signup" method="POST">
+            <div class="signup-text">SignIn</div><hr>
+            <div class="mid mid-sign">
+                <label for="name">Name</label>
+                <input type="text" id="name" placeholder="Enter Name" name="fname" required>
+            </div>
+            <div class="mid mid-sign2">
+                <label for="email">Email</label>
+                <input type="email" id="email" placeholder="Enter email" name="email" required>
+            </div>
+            <div class="mid">
+                <label for="phn">Phone no.</label>
+                <input type="number" id="phn" placeholder="Enter phone no." name="phone" required>
+            </div>
+            <div class="mid">
+                <label for="pw">Password</label>
+                <input type="password" id="pw" placeholder="Enter password" name="password" required>
+            </div>
+            <div class="signup-btn">
+                <button type="submit">SignUp</button>
+                {{!-- <input type="submit" value="SignUp"> --}}
+            </div>
+        </form>
+    </div>
+
+    {{>footer}}
+</body>
+</html>

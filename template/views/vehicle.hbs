@@ -4,61 +4,71 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vehicle Info</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/css/style.css">
 </head>
 <body id="veh-body">
-    <form action="" id="veh-fr">
+
+    {{>header}}
+    
+    <form action="/vehicle" method="POST" id="veh-fr">
         <fieldset class="vehicle-data">
             <legend>Vehicle Register!!</legend>
             <div class="vehicle-form">
                 <div class="form-item">
                     <label for="pho">Phone No.</label>
-                    <input type="number" id="pho">
+                    <input type="number" id="pho" name="phone" placeholder="Phone No." required>
                 </div>
 
                 <div class="form-item">
                     <label for="mail">E-mail</label>
-                    <input type="email" id="mail" id="">
+                    <input type="email" id="mail" id="" name="email" placeholder="E-mail" required>
                 </div>
 
                 <div class="form-item">
                     <label for="pw">Password</label>
-                    <input type="password" id="pw">
+                    <input type="password" id="pw" name="password" placeholder="Password" required>
                 </div>
 
                 <div class="form-item">
                     <label for="name">Name</label>
-                    <input type="text" id="name">
+                    <input type="text" id="name" name="name" placeholder="Full Name" required>
                 </div>
 
                 <div class="form-item">
                     <label for="vno">Vehicle No.</label>
-                    <input type="text" id="von">
+                    <input type="text" id="von" name="vehicleNo" placeholder="Vehicle Number" required>
                 </div>
 
                 <div class="form-item">
                     <label for="vinfo">Vehicle Info</label>
-                    <input type="text" id="vinfo">
+                    <input type="text" id="vinfo" name="vehicleInfo" placeholder="Vehicle Info" required>
                 </div>
 
                 <div class="form-item">
                     <label for="from">From</label>
-                    <input type="text" id="from">
+                    <input type="text" id="from" name="from" placeholder="From" required>
                 </div>
 
                 <div class="form-item">
                     <label for="to">To</label>
-                    <input type="text" id="to">
+                    <input type="text" id="to" name="to" placeholder="To" required> 
+                </div>
+
+                <div class="form-item">
+                    <label for="date">Date</label>
+                    <input type="date" id="date" name="date" placeholder="Date">
                 </div>
 
                 <div class="form-item">
                     <label for="cap">Capacity</label>
-                    <input type="text" id="cap">
+                    <input type="text" id="cap" name="capacity" placeholder="Capacity">
                 </div>
             </div>
             <button type="submit" class="veh-register-btn">Register</button>
         </fieldset>
     </form>
+
+    {{>footer}}
     
 </body>
 </html>
