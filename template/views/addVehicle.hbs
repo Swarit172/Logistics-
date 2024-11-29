@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logistic</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body id="veh-body">
+
+    {{>header}}
+
+    {{#if error}}
+        <p style="color: red;">{{error}}</p>
+    {{/if}}
+    {{#if success}}
+        <p style="color: green;">{{success}}</p>
+    {{/if}}
+    
+    <form action="/addVehicle" method="POST" id="veh-fr">
+        <fieldset class="vehicle-data">
+            <legend>Add Vehicle</legend>
+            <div class="vehicle-form">
+                <div class="form-item">
+                    <label for="from">From</label>
+                    <input type="text" id="from" name="from" placeholder="From" required>
+                </div>
+                <div class="form-item">
+                    <label for="to">To</label>
+                    <input type="text" id="to" name="to" placeholder="To" required>
+                </div>
+                <div class="form-item">
+                    <label for="date">Date</label>
+                    <input type="date" id="date" name="date" placeholder="Date" min="{{todayDate}}" required>
+                </div>
+                <div class="form-item">
+                    <label for="vehicleNo">Vehicle No</label>
+                    <input type="text" id="vehicleNo" name="vehicleNo" placeholder="Vehicle No." required>
+                </div>
+                <div class="form-item">
+                    <label for="vehicleInfo">Vehicle Info</label>
+                    <input type="text" id="vehicleInfo" name="vehicleInfo" placeholder="Vehicle Info" required>
+                </div>
+                <div class="form-item">
+                    <label for="licenseNo">License No</label>
+                    <input type="text" id="licenseNo" name="licenseNo" placeholder="License No" required>
+                </div>
+                <div class="form-item">
+                    <label for="capacity">Capacity</label>
+                    <input type="text" id="capacity" name="capacity" placeholder="Capacity" required>
+                </div>
+                <button type="submit" class="veh-register-btn">Add Vehicle</button>
+            </div>
+            {{!-- <button type="submit" class="veh-register-btn">Register</button> --}}
+        </fieldset>
+
+        
+    </form>
+
+    {{>footer}}
+    
+</body>
+</html>

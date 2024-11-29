@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logistic</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+    {{>header}}
+
+    <div class="reset-password-form">
+        <form action="/resetPw" method="POST">
+            <div class="reset-password-text">Reset Your Password</div> <hr>
+
+            {{#if error}}
+                <p style="color: red;">{{error}}</p>
+            {{/if}}
+            
+            {{#if success}}
+                <p style="color: green;">{{success}}</p>
+            {{/if}}
+
+            <div class="phno mid">
+                <label for="num">Phone Number</label>
+                <input type="number" name="phone" id="num" placeholder="Enter Phone Number" required>
+            </div>
+            <div class="new-password mid">
+                <label for="newPassword">New Password</label>
+                <input type="password" name="newPassword" id="newPassword" placeholder="Enter New Password" required>
+            </div>
+            <div class="confirm-password mid">
+                <label for="confirmPassword">Confirm Password</label>
+                <input type="password" name="confirmPassword" id="confirmPassword" placeholder="Confirm New Password" required>
+            </div>
+            <button type="submit" class="btn-reset">Submit</button>
+        </form>
+    </div>
+
+    {{>footer}}
+    
+</body>
+</html>

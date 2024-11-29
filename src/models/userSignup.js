@@ -1,5 +1,6 @@
 const mongoose = require('mongoose')
 const validator = require('validator')
+const bcrypt = require('bcryptjs')
 
 const userSchema = new mongoose.Schema({
     name: {
@@ -39,8 +40,29 @@ const userSchema = new mongoose.Schema({
     timestamps: true
 })
 
+// to hash password
+userSchema.pre('save', async function(next) {
+    const user = this
 
+    if(user.isModified('password')){
+        user.password = await bcrypt.hash(user.password, 8) // 8 - is called salt
+    }
 
+    next()
+})
+
+// Define the static method on the schema
+userSchema.statics.findByCredentials = async function (email, password) {
+    const user = await UserSign.findOne({ email })
+    if (!user) {
+        throw new Error('Email id not found')
+    }
+    const isMatch = await bcrypt.compare(password, user.password)
+    if (!isMatch) {
+        throw new Error('Invalid password')
+    }
+    return user
+}
 
 const UserSign = mongoose.model('UserSign', userSchema)
 

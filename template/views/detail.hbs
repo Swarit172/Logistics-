@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Details</title>
+    <title>Logistic</title>
     <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
@@ -15,44 +15,42 @@
             <legend>Details!!</legend>
             <div id="detail-div">
                 <table class="data">
-                <tr>
-                    <td>From</td>
-                    <td>Meerut</td>
-                </tr>
-                <tr>
-                    <td>To</td>
-                    <td>Bareilly</td>
-                </tr>
-                <tr>
-                    <td>Date</td>
-                    <td>23 October, 2024</td>
-                </tr>
-                <tr>
-                    <td>Name</td>
-                    <td>Mohan Lal</td>
-                </tr>
-                
-                <tr>
-                    <td>Phone No.</td>
-                    <td>123456789</td>
-                </tr>
-                <tr>
-                    <td>Vehicle No.</td>
-                    <td>UP43CE2340</td>
-                </tr>
-                <tr>
-                    <td>Vehicle Info</td>
-                    <td>TATA 4825 Truck</td>
-                </tr>
-                <tr>
-                    <td>Driving Licence No.</td>
-                    <td>32838ASSF09</td>
-                </tr>
-                <tr>
-                    <td>Capacity</td>
-                    <td>4ton</td>
-                </tr>
-
+                    <tr>
+                        <td>From</td>
+                        <td>{{vehicle.from}}</td>
+                    </tr>
+                    <tr>
+                        <td>To</td>
+                        <td>{{vehicle.to}}</td>
+                    </tr>
+                    <tr>
+                        <td>Date</td>
+                        <td>{{vehicle.date}}</td>
+                    </tr>
+                    <tr>
+                        <td>Name</td>
+                        <td>{{vehicle.name}}</td>
+                    </tr>
+                    <tr>
+                        <td>Phone</td>
+                        <td>{{vehicle.phone}}</td>
+                    </tr>
+                    <tr>
+                        <td>Vehicle No</td>
+                        <td>{{vehicle.vehicleNo}}</td>
+                    </tr>
+                    <tr>
+                        <td>Vehicle Info</td>
+                        <td>{{vehicle.vehicleInfo}}</td>
+                    </tr>
+                    <tr>
+                        <td>Driving License No</td>
+                        <td>{{vehicle.licenseNo}}</td>
+                    </tr>
+                    <tr>
+                        <td>Capacity</td>
+                        <td>{{vehicle.capacity}}</td>
+                    </tr>
                 </table>
             </div>
 

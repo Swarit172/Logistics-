@@ -1,11 +1,45 @@
 <section id="header">
-        <a href="/"><img src="" alt="logo"></a>
-        <div>
-            <ul id="navbar">
-                <li ><a class="active" href="/">Home</a></li>
-                <li><a href="/vehicle">Vehicle Register</a></li>
-                <li><a href="/about">About</a></li>
-                <li><a href="/login">Login/SignUp</a></li>
-            </ul>
-        </div>
+    {{!-- <a href="/"><img src="./imgs/l1.png" alt="logo" style="height: 50px; weight: 50px;"></a> --}}
+    <a href="">.</a>
+
+    <div>
+        <ul id="navbar">
+            <!-- Common Links -->
+            <li>
+                <a href="/" class="{{#if (eq currentPath "/")}}active{{/if}}">Home</a>
+            </li>
+            <li>
+                <a href="/about" class="{{#if (eq currentPath "/about")}}active{{/if}}">About</a>
+            </li>
+            
+            <!-- Conditional Rendering for Vehicle Login -->
+            {{#if vehicleUser}}
+                <li>
+                    <a href="/addVehicle" class="{{#if (eq currentPath "/addVehicle")}}active{{/if}}">Add Vehicle</a>
+                </li>
+                <li>
+                    <a href="#">Welcome, {{vehicleUser.name}}</a>
+                </li>
+                <li>
+                    <a href="/logout">Logout</a>
+                </li>
+            {{else if user}}
+                <!-- Conditional Rendering for Regular User Login -->
+                <li>
+                    <a href="#">Welcome {{user.name}}</a>
+                </li>
+                <li>
+                    <a href="/logout">Logout</a>
+                </li>
+            {{else}}
+                <!-- Links for Guests -->
+                <li>
+                    <a href="/vlogin" class="{{#if (eq currentPath "/vlogin")}}active{{/if}}">Vehicle Register</a>
+                </li>
+                <li>
+                    <a href="/login" class="{{#if (eq currentPath "/login")}}active{{/if}}">Login/SignUp</a>
+                </li>
+            {{/if}}
+        </ul>
+    </div>
 </section>

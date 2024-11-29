@@ -3,25 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
+    <title>Logistic</title>
     <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
 
     {{>header}} 
 
+    {{#if error}} 
+        <p style="color: red;">{{error}}</p>
+    {{/if}}
+
     <div class="login-form">
         <form action="/login" method="POST">
             <div class="login-text">Login To Your Account</div> <hr>
             <div class="phno mid">
                 <!-- <i class="fa-solid fa-user"></i> -->
-                 <label for="num">Phone no.</label>
-                <input type="number" name="" id="num" placeholder="Enter Phone no.">
+                <label for="num" style="margin-right: 62px;">Email</label>
+                <input type="email" name="email" id="num" placeholder="Enter Email id">
             </div>
             <div class="pw mid">
                 <!-- <i class="fa-solid fa-lock"></i> -->
-                 <label for="password">Password</label>
-                <input type="password" name="" id="password" placeholder="Password">
+                <label for="password">Password</label>
+                <input type="password" name="password" id="password" placeholder="Password">
             </div>
             <div class="remember-me">
                 <input type="checkbox" name="remember" id="remember">
@@ -31,7 +35,7 @@
             <hr>
             <div class="below-login">
                 <div class="account">Not registered? <a href="/signup">Create a Account</a></div>
-                <div class="lost-pw">Lost your password? <a href="#">Click here to recover</a></div>
+                <div class="lost-pw">Lost your password? <a href="/resetPw">Click here to recover</a></div>
             </div>
         </form>
     </div>
