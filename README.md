@@ -1,4 +1,4 @@
-# Logistics-
+# Logistics MAnagement System-
 Logistic Website <br>
 
 File Structure :- <br> 
@@ -43,5 +43,27 @@ Logistics/ <br>
 ├── node_modules/              # Installed Node.js packages <br>
 └── README.md                  # Project documentation <br>
 
+-------------------------------------------------------------------------------------------------------------- 
 
+A web-based solution for managing logistics operations efficiently. The platform provides features for user registration, vehicle information management, and seamless authentication.
+
+## Features
+
+- **User Authentication**: Secure login and signup for users.
+- **Vehicle Management**: Add, view, and manage vehicle details.
+- **Responsive Design**: Clean and user-friendly interface.
+- **Role-Specific Access**: Access control for viewing detailed vehicle data based on user authentication.
+
+## Tech Stack
+
+- **Backend**: Node.js, Express.js
+- **Database**: MongoDB
+- **Frontend**: Handlebars (HBS), HTML, CSS
+- **Authentication**: Session-based authentication
+
+## Setup Instructions
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/Swarit172/Logistics-.git
 
