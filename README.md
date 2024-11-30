@@ -1,4 +1,4 @@
-# Logistics MAnagement System-
+# Logistics Management System-
 
 A web-based solution for managing logistics operations efficiently. The platform provides features for user registration, vehicle information management, and seamless authentication.
 
