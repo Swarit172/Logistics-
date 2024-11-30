@@ -1,7 +1,8 @@
 # Logistics MAnagement System-
-Logistic Website <br>
 
-File Structure :- <br> 
+A web-based solution for managing logistics operations efficiently. The platform provides features for user registration, vehicle information management, and seamless authentication.
+
+## File Structure :-
 Logistics/ <br>
 ├── public/                    # Static files like CSS, images <br>
 │   ├── css/ <br>
@@ -45,7 +46,6 @@ Logistics/ <br>
 
 -------------------------------------------------------------------------------------------------------------- 
 
-A web-based solution for managing logistics operations efficiently. The platform provides features for user registration, vehicle information management, and seamless authentication.
 
 ## Features
 
@@ -66,4 +66,18 @@ A web-based solution for managing logistics operations efficiently. The platform
 1. Clone the repository:
    ```bash
    git clone https://github.com/Swarit172/Logistics-.git
+
+2. Navigate to the project directory:
+   ```bash
+   cd Logistics
+
+3. Install dependencies:
+   ```bash
+   npm install
+
+4. Run the application:
+   ```bash
+   npm start
+   
+5. Open your browser and navigate to http://localhost:9090.
 
