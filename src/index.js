@@ -1,10 +1,11 @@
+require('dotenv').config()
 const express = require('express')
 const path = require('path')
 const hbs = require('hbs')
 const session = require('express-session')
 const userRouter = require('./routers/userSignup')
 const vehicleRouter = require('./routers/vehicleRegister')
-const port = process.env.PORT || 9090
+const port = process.env.PORT
 require('./db/mongoosee')
 
 const app = express()
@@ -28,7 +29,7 @@ app.use(express.static(staticpath))
 // Initialize session
 app.use(
     session({
-        secret: 'yourSecretKey',
+        secret: 'process.env.SECRET_KEY',
         resave: false,
         saveUninitialized: true,
         cookie: { secure: false }

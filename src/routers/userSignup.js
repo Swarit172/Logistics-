@@ -62,18 +62,12 @@ router.post('/signup', async (req,res) => {
 
 router.post('/resetPw', async (req, res) => {
     try {
-        const { phone, newPassword, confirmPassword } = req.body
+        const { email, newPassword, confirmPassword } = req.body
 
         // Validate input
-        if (!phone || !newPassword || !confirmPassword) {
+        if (!email || !newPassword || !confirmPassword) {
             return res.status(400).render('resetPw', {
                 error: 'All fields are required.'
-            })
-        }
-
-        if (!/^\d{10}$/.test(phone)) {
-            return res.status(400).render('vlogin', {
-                error: 'Phone number must be exactly 10 digits.'
             })
         }
 
@@ -84,10 +78,10 @@ router.post('/resetPw', async (req, res) => {
         }
 
         // Find user by phone number
-        const user = await UserSign.findOne({ phone })
+        const user = await UserSign.findOne({ email })
         if (!user) {
             return res.status(404).render('resetPw', {
-                error: 'Phone number not found in database.'
+                error: 'Email not found in database.'
             })
         }
 
@@ -115,7 +109,7 @@ router.get('/', async (req,res) => {
     res.render('index', {currentPath: '/', user: req.session.user, vehicles: formattedVehicles})
 })
 
-router.get('/detail/:id', async (req,res) => {
+router.get('/detail/:id', auth , async (req,res) => {
     try{
         const vehicle = await Vehicle.findById(req.params.id)
         if(!vehicle){
