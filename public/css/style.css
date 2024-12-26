@@ -7,9 +7,15 @@
     font-family: 'Libre Franklin', sans-serif;
 }
 
-body{
+/* body{
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+} */
+
+.bg-img{
     background-image: url("../imgs/home.jpg");
-    background-size: cover; 
+    background-size: 100% 100%; 
     /* background-position: center;  */
     background-repeat: no-repeat;
 }
@@ -34,7 +40,7 @@ body{
     background-size: cover;
     background-position: center;
     box-shadow: 0 5px 15px rgb(0,0,0,0.06);
-    /* z-index: 999; */
+    z-index: 999;
     position: sticky;  /*done to stick taskbar at top..when we scroll page*/
     left: 0;
     top: 0; 
@@ -90,6 +96,15 @@ body{
     left: 20px;
 }
 
+.mobile{
+    display: none;
+    align-items: center;
+}
+
+#close{
+    display: none;
+}
+
 marquee{
     padding: 3px 0 3px 0;
     background: none;
@@ -101,9 +116,11 @@ footer {
     justify-content: space-between;
     background-image: url("../imgs/footer.jpg");
     background-size: 1550px 200px; 
-    background-position: center; 
+    background-position: center;
+    /* background-size: 100% 100%;  */
     background-repeat: no-repeat;
     height: 200px;
+    margin-bottom: 0px;
 }
 
 footer .col {
@@ -165,7 +182,7 @@ footer .copyright {
 }
 
 #motion-rl{
-    margin: 10px;
+    padding: 10px;
 }
 
 #table-login {
@@ -179,39 +196,7 @@ footer .copyright {
 #table-login .left{
     width: 70%;
     padding-right: 20px;
-}
-
-
-/* #table-login .left .search {
-    display: flex;
-    align-items: center;
-    margin-left: 30%;
-    margin-top: 20px;
-} */
-
-/* #table-login .left .search .search-from{
-   
-    margin-right: 30px;
-}
-
-#table-login .left .search .search-to{
-    padding-right: 30px;
-} */
-
-/* #table-login .left .search .box input{
-    outline: none;
-    padding: 2px 4px;
-    margin-left: 0;
-}
-
-#table-login .left .search .box label{
-    background-color: #a3a8a6;
-    padding: 1px 4px;
-}
-
-#table-login .left .search .search-btn button{
-    padding: 3px 4px ;
-} */
+} 
 
 .table{
     margin: 20px;
@@ -259,88 +244,15 @@ footer .copyright {
     text-decoration: none;
 }
 
-/* #table-login .right{
-    width: 30%;
-    margin: 20px;
-    border-radius: 5px;
-    box-shadow: 0 0 10px 4px rgba(0,0,0,0.4);
-}
-
-#table-login .right form{
-    margin: 20px;
-}
-
-#table-login .right form .login-text{
-    font-size: 25px;
-    padding-bottom: 10px;
-}
-
-#table-login .right form .phno{
-    padding: 15px 0;
-    display: flex;
-}
-
-#table-login .right form .phno input{
-    width: 100%;
-    height: 30px;
-    outline: none;
-    padding-left: 4px;
-}
-
-#table-login .right form .pw{
-    padding-bottom: 15px;
-    display: flex;
-}
-
-#table-login .right form .pw input{
-    width: 100%;
-    height: 30px;
-    outline: none;
-    padding-left: 4px;
-}
-
-#table-login .right form .mid i {
-    align-content: center;
-    padding: 0 4px;
-    background-color: #a3a8a6;
-}
-
-#table-login .right form .remember-me{
-    font-size: 13px;
-}
-
-#table-login .right form .remember-me input{ 
-    zoom: .85;
-    align-content: center;
-}
-
-#table-login .right form button{
-    margin: 15px 0;
-    padding: 3px 5px;
-}
-
-#table-login .right form .below-login {
-    margin: 15px 0;
-}
-
-#table-login .right form .below-login .lost-pw{
-    margin: 15px 0;
-}
-
-#table-login .right form .below-login a{
-    text-decoration: none;
-    color: #122fc4;
-}
-
-#table-login .right form .below-login a:hover{
-    color: #088178;
-} */
-
 /* ---------------------------------------------------------------- */
 /* Details page */
 
+.detail-format{
+    padding: 7% 20% 7% 20%;
+}
+
 .section{
-    margin: 7% 20% 7% 20%;
+    /* margin: 7% 20% 7% 20%; */
     background-color: #e6f3ede5;
 }
 #detail-div{
@@ -360,19 +272,16 @@ table tr:nth-child(even){
 /*----------------------------------------------------------------------*/
 /* Vehicle Register */ 
 
-#veh-body{
-    background-color: #d9ece6;
+.veh-pad{
+    padding: 3% 20%;
 }
 
 .vehicle-data {
-    margin: 3% 20%;
+    /* margin: 3% 20%; */
     padding: 20px;
     border: 2px solid #fffbfb;
-    /* border-radius: 8px; */
     box-shadow: 0px 4px 8px rgba(0,0,0,0.1);
-    /* z-index: 1; */
-    background-color: #ffffff;
-    background: none;
+    z-index: 1;
 }
 
 .vehicle-data legend{
@@ -436,7 +345,7 @@ table tr:nth-child(even){
 /* Login page */
 
 .login-form {
-    margin: 7% 30% 7% 30%;
+    padding: 7% 30% 7% 30%;
 }
 
 .login-text{
@@ -446,7 +355,7 @@ table tr:nth-child(even){
 }
 
 hr{
-    width: 600px;
+    width: 400px;
     margin: 16px 16px 16px 30px;
 }
 
@@ -493,7 +402,7 @@ hr{
 /* Signup Page */
 
 .signup-form{
-    margin: 7% 30% 7% 30%;
+    padding: 7% 30% 7% 30%;
 }
 
 .signup-text{
@@ -523,6 +432,7 @@ hr{
     padding: 50px;
     text-align: center;
     background-color: #f9f9f9;
+    color: #101010;
 }
 
 #about .container {
@@ -547,7 +457,7 @@ hr{
 #privacy-policy, #contact-us {
     padding: 30px;
     background-color: #f9f9f9;
-    margin: 20px 0;
+    /* margin: 20px 0; */
 }
 
 #privacy-policy h2,
@@ -581,7 +491,7 @@ hr{
 /*  Password Reset */
 
 /* Reset Password Form Styles */
-.reset-password-form {
+/* .reset-password-form {
     max-width: 400px;
     margin: 50px auto;
     padding: 20px;
@@ -590,95 +500,9 @@ hr{
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     background-color: #f9f9f9;
     font-family: Arial, sans-serif;
-}
-
-.reset-password-form .reset-password-text {
-    font-size: 24px;
-    font-weight: bold;
-    text-align: center;
-    margin-bottom: 15px;
-    color: #333;
-}
-
-.reset-password-form hr {
-    border: none;
-    border-top: 1px solid #ddd;
-    margin-bottom: 20px;
-}
-
-.reset-password-form .mid {
-    margin-bottom: 15px;
-    display: flex;
-    flex-direction: column;
-}
-
-.reset-password-form label {
-    font-weight: bold;
-    margin-bottom: 5px;
-    color: #555;
-}
-
-.reset-password-form input {
-    padding: 10px;
-    font-size: 16px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-}
-
-.reset-password-form input:focus {
-    border-color: #007bff;
-    outline: none;
-    box-shadow: 0 0 3px rgba(0, 123, 255, 0.5);
-}
-
-.reset-password-form .btn-reset {
-    background-color: #007bff;
-    color: #fff;
-    font-size: 16px;
-    font-weight: bold;
-    padding: 10px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    width: 100%;
-    margin-top: 10px;
-    transition: background-color 0.3s ease;
-}
-
-.reset-password-form .btn-reset:hover {
-    background-color: #0056b3;
-}
-
-.reset-password-form p {
-    margin: 0;
-    font-size: 14px;
-    text-align: center;
-}
-
-.reset-password-form p[style="color: red;"] {
-    color: red;
-    margin-bottom: 15px;
-}
-
-.reset-password-form p[style="color: green;"] {
-    color: green;
-    margin-bottom: 15px;
-}
-
-/* ------------------------------------------------------------------------ */
-/* Vehicle Reset PAssword */
-
-
-/* Reset Password Form Styles */
-.reset-password-form {
-    max-width: 400px;
-    margin: 50px auto;
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    background-color: #f9f9f9;
-    font-family: Arial, sans-serif;
+} */
+.reset-password-form{
+    padding: 6% 35%;
 }
 
 .reset-password-form .reset-text {
@@ -691,6 +515,7 @@ hr{
 
 .reset-password-form hr {
     border: none;
+    width: 300px;
     border-top: 1px solid #ddd;
     margin-bottom: 20px;
 }
@@ -725,13 +550,140 @@ hr{
     color: #fff;
     font-size: 16px;
     font-weight: bold;
-    padding: 10px;
+    padding: 10px 25px;
     border: none;
     border-radius: 4px;
     cursor: pointer;
+    margin-left: 35%;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
 }
 
 .reset-password-form .btn-reset:hover {
     background-color: #0056b3;
 }
 
+/* ------------------------------------------------------------------------------ */
+
+/* Start media query*/
+
+@media (max-width:799px){
+    #navbar {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        position: fixed;
+        top: 0;
+        right: -200px;
+        height: 35vh;
+        width: 200px;
+        background-color: #9bdcd9;
+        box-shadow: 0 40px 60px rgba(0,0,0,0.1);
+        padding: 80px 0 0 10px;
+        transition: 0.3s;
+    }
+
+    #navbar.active{
+        right: 0px;
+    }
+
+    #navbar li{
+        margin-bottom: 25px;
+    }
+
+    .mobile{
+        display: flex;
+        align-items: center;
+    }
+
+    .mobile i{
+        font-size: 24px;
+        padding-left: 20px;
+    }
+
+    #close{
+        display: flex;
+        position: absolute;
+        top: 30px;
+        left: 30px;
+        font-size: 24px;
+        text-decoration: none;
+        color: #101010;
+    }
+
+    .size-view{
+        height: 71vh;
+    }
+
+    #table-login .left{
+        width: 100%;
+    }
+}
+
+
+
+    @media (max-width:477px){
+        #table-login .left{
+            width: 100%;    
+        }
+        
+        /* footer{
+            background-size: 100% 200%;
+        } */
+        .login-form{
+            padding: 30px 15px;
+        }
+
+        hr{
+            width: 250px;
+        }
+
+        .mid input{
+            width: 300px;
+        }
+
+        .login-form{
+            padding: 90px 20px;
+        }
+
+        .signup-form{
+            padding: 90px 15px;
+        }
+
+        .veh-pad{
+            padding: 90px 5px;
+        }
+
+        .vehicle-form{
+            margin: 20px 9px;
+        }
+
+        .veh-register-btn{
+            margin-left: 9px;
+        }
+
+        .reset-password-form{
+            padding: 80px 8px;
+        }
+
+        .detail-format{
+            padding: 20px 8px;
+        }
+
+        #detail-div{
+            padding: 5px;
+        }
+
+        /* .foot{
+            padding: 10px;
+            background-size: 100% 100%;
+        } */
+
+        footer{
+            background-size: 100% 100%;
+            
+            
+        }
+
+    }

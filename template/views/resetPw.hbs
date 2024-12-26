@@ -5,14 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Logistic</title>
     <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"  />
 </head>
 <body>
 
     {{>header}}
 
+    <div class="bg-img size-view">
+
     <div class="reset-password-form">
         <form action="/resetPw" method="POST">
-            <div class="reset-password-text">Reset Your Password</div> <hr>
+            <div class="reset-text">Reset Your Password</div> <hr>
 
             {{#if error}}
                 <p style="color: red;">{{error}}</p>
@@ -38,7 +41,11 @@
         </form>
     </div>
 
+    </div>
+
     {{>footer}}
+
+    <script src="js/script.js"></script>
     
 </body>
 </html>
