@@ -1,8 +1,9 @@
 const mongoose = require('mongoose')
+require('dotenv').config()
 
-mongoose.connect('mongodb://127.0.0.1:27017/logistic-api')
+mongoose.connect(process.env.MONGO_URI)
 .then(() => {
     console.log('Connection successful')
 }).catch((e) => {
-    console.log('No connection')
+    console.log('No connection', e.message)
 })
